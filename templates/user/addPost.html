@@ -1,0 +1,27 @@
+{% extends 'user/menu.html' %}
+{% block content %}
+
+<div class="container-fluid w-50 p-3 bg-light shadow rounded mt-5">
+    <h2 class="text-center text-primary">NEW POST</h2>
+    <form action="" method="post" id="postForm" enctype="multipart/form-data">
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="desc">Caption</label>
+                <textarea name="desc" id="desc" placeholder="Caption" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="image">Image</label>
+                <input type="file" name="image" id="image" placeholder="Image" class="form-control">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-12 text-right">
+                <button class="btn btn-success">Post</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

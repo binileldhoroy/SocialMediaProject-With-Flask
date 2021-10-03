@@ -1,0 +1,28 @@
+{% extends 'public/menu.html' %}
+{% block content %}
+
+<div class="container-fluid w-50 p-3 bg-light shadow rounded mt-5">
+    <h2 class="text-center text-primary">LOGIN</h2>
+    <form action="" method="post" id="loginForm">
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="uname">Username</label>
+                <input type="text" name="uname" value="{{uname}}" id="uname" required placeholder="Username" class="form-control">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="pword">Password</label>
+                <input type="password" name="pword" value="{{pword}}" id="pword" required placeholder="Password" class="form-control">
+            </div>
+        </div>
+        <div class="alert-danger">{{msg}}</div>
+        <div class="row form-group">
+            <div class="col-md-12 text-right">
+                <button class="btn btn-success">Login</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

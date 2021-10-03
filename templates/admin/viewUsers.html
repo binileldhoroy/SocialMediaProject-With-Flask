@@ -1,0 +1,30 @@
+{% extends 'admin/menu.html' %}
+{% block content %}
+
+<div class="container-fluid">
+    <h2 class="text-center text-primary">USERS LIST</h2>
+    {% if users %}
+    <table class="table table-bordered table-info table-striped">
+        <thead class="thead-dark">
+            <th>Sl.No</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </thead>
+        <tbody>
+            {% for u in users %}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{u[0]}}</td>
+                <td>{{u[1]}}</td>
+                <td>{{u[2]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="alert-danger">No Users To Show!</div>
+    {% endif %}
+</div>
+
+{% endblock  %}

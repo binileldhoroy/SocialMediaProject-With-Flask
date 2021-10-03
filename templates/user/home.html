@@ -1,0 +1,16 @@
+{% extends 'user/menu.html' %}
+{% block content %}
+
+<div class="container-fluid w-75 mt-5">
+    {% for post in posts %}
+    <div class="p-3 bg-light shadow rounded my-5">
+        <div>{{post[4]}} {{post[5]}}</div>
+        <div>{{post[2]}}</div>
+        <div class="w-100">
+            <img src="/static/uploads/{{post[3]}}" class="img-fluid w-100" alt="post image">
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

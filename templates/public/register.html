@@ -1,0 +1,46 @@
+{% extends 'public/menu.html' %}
+{% block content %}
+
+<div class="container-fluid w-50 p-3 bg-light shadow rounded mt-5">
+    <h2 class="text-center text-primary">REGISTER HERE</h2>
+    <form action="" method="post" id="registerForm">
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" value="{{form.name}}" id="name" placeholder="Full Name" class="form-control">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone" value="{{form.phone}}" placeholder="Phone Number" class="form-control">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" value="{{form.email}}" placeholder="Email" class="form-control">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="pword">Password</label>
+                <input type="password" name="pword" id="pword" placeholder="Password" class="form-control">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="cpword">Confirm Password</label>
+                <input type="password" name="cpword" id="cpword" placeholder="Confirm Password" class="form-control">
+            </div>
+        </div>
+        <div class="alert-danger">{{msg}}</div>
+        <div class="row form-group">
+            <div class="col-md-12 text-right">
+                <button class="btn btn-success">Register</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
